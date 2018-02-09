@@ -3,12 +3,11 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 100px auto auto auto auto 40px;
+    grid-template-rows: 100px auto auto auto 40px;
     grid-template-areas:
         "h h h h h h h h h h"
         "p p c c c c c c c c"
-        "m m c c c c c c c c"
-        "m m c c c c c c c c"
+        "p p c c c c c c c c"
         "m m c c c c c c c c"
         "f f f f f f f f f f";
 }
@@ -17,11 +16,11 @@
     grid-area: h;
 }
 
-.tinytitle {
+.menu {
     grid-area: m;
 }
 
-.descriptor {
+.content {
     grid-area: c;
 }
 
