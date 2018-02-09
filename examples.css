@@ -1,23 +1,33 @@
 .wrapper {
+    height:  100%;
     display: grid;
+    grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px auto 40px;
+    grid-template-areas:
+        "p h h h h h h h h h h h"
+        "m c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
 }
 
 .header {
-    grid-column:  1 / -1;
+    grid-area: h;
 }
 
 .menu {
-    grid-column: span 4;
+    grid-area: m;
 }
 
 .content {
-    grid-column: span 8;
+    grid-area: c;
 }
 
 .footer {
-    grid-column: span 12;
+    grid-area: f;
+}
+
+.picture{
+    grid-area: p;
 }
 
 @media screen and (max-width: 480px) {
