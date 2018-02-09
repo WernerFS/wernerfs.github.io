@@ -5,8 +5,8 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 40px auto 40px;
     grid-template-areas:
-        "p h h h h h h h h h"
-        "m c c c c c c c c c"
+        "p p h h h h h h h h"
+        "p p m c c c c c c c"
         "f f f f f f f f f f";
 }
 
