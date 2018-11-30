@@ -27,9 +27,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     background-color: #ccc;
 }
 .panel {
-    display: none;
     overflow: hidden;
 }
+
+  .panel {
+      padding: 1 1px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+  }
+
 </style>
 <body class="w3-light-grey">
 
@@ -53,7 +61,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-red "></i>Electronic Engineer</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Guatemala, GT</p>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>werner_florian@live.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-red"></i>5746-4774</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-red"></i>(+502) 5746-4774</p>
           <hr>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-red"></i>Skills</b></p>
@@ -105,7 +113,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <div class="w3-twothird">
     <button class="accordion "><h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Work Experience</h2></button>
 <div class="panel">
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
+      <div class="w3-container w3-card w3-white">
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Hardware Design Engineer / Kingo Energy</b></h5>
           <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2018 - <span class="w3-tag w3-red w3-round">Current</span></h6>
@@ -126,7 +134,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </div>
 </div>
 <button class="accordion"><h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Education</h2></button>
-<div class="panel">
+<div class="panel" style>
       <div class="w3-container w3-card w3-white">
         <div class="w3-container">
           <h5 class="w3-opacity"><b>ICTP / Trieste, Italy</b></h5>
@@ -162,24 +170,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <p>Inspired by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
-<style>
-  .panel {
-      padding: 0 18px;
-      background-color: white;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-  }
-</style>
-
 <script>
   var acc = document.getElementsByClassName("accordion");
   var i;
-  
+  console.log('accordion pressed');
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       this.classList.toggle("active");
       var panel = this.nextElementSibling;
+      console.log(panel);
       if (panel.style.maxHeight){
         panel.style.maxHeight = null;
       } else {
